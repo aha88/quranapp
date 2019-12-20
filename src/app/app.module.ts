@@ -14,6 +14,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 import { BackgroundMode } from '@ionic-native/background-mode/ngx';
+import { DeviceOrientation } from '@ionic-native/device-orientation/ngx';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { BackgroundMode } from '@ionic-native/background-mode/ngx';
     SplashScreen,
     BackgroundMode,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    LocalNotifications
+    LocalNotifications,
+    DeviceOrientation
 
   ],
   bootstrap: [AppComponent]

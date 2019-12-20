@@ -51,6 +51,8 @@ export class PrayertimePage implements OnInit {
   p3:any; 
   p4:any; 
   p5:any; 
+  coorCounty: any;
+  coorState: any;
   
 
   constructor(
@@ -85,6 +87,8 @@ export class PrayertimePage implements OnInit {
   
 
   ngOnInit() {
+     this.deviceLocation();
+
     var d = new Date();
     let vaf = d.getDate();
     let arrayday = vaf-1;
@@ -116,7 +120,7 @@ export class PrayertimePage implements OnInit {
       
     },
     error => {
-        this.hidedate=false;
+       // this.hidedate=false;
 
     });
 
@@ -152,6 +156,13 @@ export class PrayertimePage implements OnInit {
     
   }
 
+  deviceLocation() {
+    this.http.get('https://geoip-db.com/json/')
+      .subscribe((data: any) => {
+        this.coorState = data.state;
+        this.coorCounty = data.country_name;
+      });
+  }
 
 
   getlocation() {
@@ -208,18 +219,16 @@ export class PrayertimePage implements OnInit {
         text: "Drop everything lets pray",
         trigger: { at: new Date(new Date().setHours(this.fajrhr,this.fajrmin,0,0)) },
         foreground: true,
-        vibrate: true,
         sound: "file://azan2.mp3",
         smallIcon: 'res://QH-icon-v5.png',
         icon: 'file://icon/QH-icon-v5.png'
       },
-      {
+      { 
         id:2,
         title: "Azan for Dhuhr",
         text: "Drop everything lets pray",
         trigger: { at: new Date(new Date().setHours(this.dhuhrhr,this.dhuhrmin,0,0)) },
         foreground: true,
-        vibrate: true,
         sound: "file://azan2.mp3",
         smallIcon: 'res://QH-icon-v5.png',
         icon: 'file://icon/QH-icon-v5.png'
@@ -230,7 +239,6 @@ export class PrayertimePage implements OnInit {
         text: "Drop everything lets pray",
         trigger: { at: new Date(new Date().setHours(this.asrhr,this.asrmin,0,0)) },
         foreground: true,
-        vibrate: true,
         sound: "file://azan2.mp3",
         smallIcon: 'res://QH-icon-v5.png',
         icon: 'file://icon/QH-icon-v5.png'
@@ -241,7 +249,6 @@ export class PrayertimePage implements OnInit {
         text: "Drop everything lets pray",
         trigger: { at: new Date(new Date().setHours(this.maghribhr,this.maghribmin,0,0)) },
         foreground: true,
-        vibrate: true,
         sound: "file://azan2.mp3",
         smallIcon: 'res://QH-icon-v5.png',
         icon: 'file://icon/QH-icon-v5.png'
@@ -252,7 +259,6 @@ export class PrayertimePage implements OnInit {
         text: "Drop everything lets pray",
         trigger: { at: new Date(new Date().setHours(this.ishahr,this.ishamin,0,0)) },
         foreground: true,
-        vibrate: true,
         sound: "file://azan2.mp3",
         smallIcon: 'res://QH-icon-v5.png',
         icon: 'file://icon/QH-icon-v5.png'
