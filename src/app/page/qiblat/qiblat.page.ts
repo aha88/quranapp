@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import {  DeviceOrientation, DeviceOrientationCompassHeading} from '@ionic-native/device-orientation/ngx';
 import { Platform } from '@ionic/angular';
 import { Subscription } from 'rxjs';
@@ -10,27 +9,25 @@ import { TransformationType, Direction } from 'angular-coordinates';
   templateUrl: './qiblat.page.html',
   styleUrls: ['./qiblat.page.scss'],
 })
-export class QiblatPage implements OnInit {
-
+export class QiblatPage implements OnInit, OnDestroy {
   direction = Direction;
   type = TransformationType;
   compassDegree: number;
   cardinalPosition: string;
-  latCoords: number;
-  lngCoords: number;
+  latCoords =  localStorage.getItem('latitude');
+  lngCoords =  localStorage.getItem('longitude');
 
   deviceSubscription: Subscription;
 
   constructor(
     private deviceOrientation: DeviceOrientation,
     private platform: Platform,
-    private http: HttpClient
   ) {}
 
   ngOnInit() {
     this.platform.ready().then(() => {
       this.deviceCompassInfo();
-      this.deviceLocation();
+     
     });
   }
 
@@ -57,13 +54,6 @@ export class QiblatPage implements OnInit {
     );
   }
 
-  deviceLocation() {
-    this.http.get('https://geoip-db.com/json/')
-      .subscribe((data: any) => {
-        this.latCoords = data.latitude;
-        this.lngCoords = data.longitude;
-      });
-  }
 
   rotateCompass(deg) {
     (<HTMLElement>document.querySelector('#image')).style.transform = `rotate(${-deg}deg)`;

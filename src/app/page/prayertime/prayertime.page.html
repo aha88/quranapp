@@ -26,7 +26,7 @@
           <ion-card-content class="ion-text-center">
               <b> {{date_hijri}}  {{date_hijri_day}},  {{date_hijri_year}}</b> <br> 
               <p style="font-size: .8em">{{date_gregorian}}<br>  
-                <sub style="font-size: 1em">{{date_timezone}} </sub>
+                <sub style="font-size: 1em">{{coorState}}, {{coorCounty}} </sub>
               </p>
           </ion-card-content>
         </ion-card>
@@ -54,7 +54,7 @@
                 <h3>Fajr </h3>
               </ion-col>
               <ion-col class="text-right">
-                <h3>{{fajrhr}}:{{fajrmin}}</h3>
+                <h3>{{p0}}</h3>
               </ion-col>
           </ion-row>
           <ion-row>
@@ -62,7 +62,7 @@
                 <h3>Sunrise</h3>
               </ion-col>
               <ion-col class="text-right">
-                <h3>{{sunrisehr}}:{{sunrisemin}}</h3>
+                <h3>{{p1}}</h3>
               </ion-col>
           </ion-row>
           <ion-row>
@@ -70,7 +70,7 @@
                 <h3>Dhuhr</h3>
               </ion-col>
               <ion-col class="text-right">
-                <h3>{{dhuhrhr}}:{{dhuhrmin}}</h3>
+                <h3>{{p2}}</h3>
               </ion-col>
           </ion-row>
           <ion-row>
@@ -78,7 +78,7 @@
                 <h3>Asr</h3>
               </ion-col>
               <ion-col class="text-right">
-                <h3>{{asrhr}}:{{asrmin}}</h3>
+                <h3>{{p3}}</h3>
               </ion-col>
           </ion-row>
           <ion-row>
@@ -86,7 +86,7 @@
               <h3>Maghrib</h3>
             </ion-col>
             <ion-col class="text-right">
-              <h3>{{maghribhr}}:{{maghribmin}}</h3>
+              <h3>{{p4}}</h3>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -97,7 +97,7 @@
             </ion-col>
             <ion-col class="text-right">
               <h3>
-                {{ishahr}}: {{ishamin}}
+                {{p5}}
               </h3>
           </ion-col>
             </ion-row>
