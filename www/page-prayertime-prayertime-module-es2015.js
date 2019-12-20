@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n      <ion-buttons slot=\"start\">\n        <ion-menu-button></ion-menu-button>\n      </ion-buttons>\n      <ion-title>\n        Prayer Times\n      </ion-title>\n\n      <ion-buttons slot=\"primary\">\n        Reset\n        <ion-icon slot=\"end\" (click)=\"getlocation()\" name=\"locate\" style=\"font-size: 24px;\"></ion-icon>\n\n      </ion-buttons>\n\n    </ion-toolbar>\n  </ion-header>\n  \n\n<ion-content >\n  <ion-grid id=\"div\">\n\n    <ion-row>\n      <ion-col>\n        <ion-card *ngIf=\"hidedate\">\n          <ion-card-content class=\"ion-text-center\">\n              <b> {{date_hijri}}  {{date_hijri_day}},  {{date_hijri_year}}</b> <br> \n              <p style=\"font-size: .8em\">{{date_gregorian}}<br>  \n                <sub style=\"font-size: 1em\">{{date_timezone}} </sub>\n              </p>\n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n \n\n    <ion-row id=\"secondbox\">\n      <ion-col>\n        <ion-card>\n          <ion-card-content>\n            <ion-row class=\"border\">\n              <ion-col>\n                <h3><b>Next Prayer</b></h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3><b>Time Prayer</b></h3>\n              </ion-col>\n            </ion-row>\n            \n            <hr>\n            <ion-row>\n              <ion-col>\n                <h3>Fajr</h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3>{{fajrhr}}:{{fajrmin}}</h3>\n              </ion-col>\n          </ion-row>\n          <ion-row>\n              <ion-col>\n                <h3>Sunrise</h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3>{{sunrisehr}}:{{sunrisemin}}</h3>\n              </ion-col>\n          </ion-row>\n          <ion-row>\n              <ion-col>\n                <h3>Dhuhr</h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3>{{dhuhrhr}}:{{dhuhrmin}}</h3>\n              </ion-col>\n          </ion-row>\n          <ion-row>\n              <ion-col>\n                <h3>Asr</h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3>{{asrhr}}:{{asrmin}}</h3>\n              </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col>\n              <h3>Maghrib</h3>\n            </ion-col>\n            <ion-col class=\"text-right\">\n              <h3>{{maghribhr}}:{{maghribmin}}</h3>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col>\n              <h3>\n                Isha\n              </h3>\n            </ion-col>\n            <ion-col class=\"text-right\">\n              <h3>\n                {{ishahr}}: {{ishamin}}\n              </h3>\n          </ion-col>\n            </ion-row>\n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n\n    <ion-row id=\"secondbox\">\n      <ion-col>\n        <ion-card>\n          <ion-card-content>\n            <ion-button (click)=\"gotoqiblat()\" expand=\"full\" color=\"danger\">\n                <ion-icon src=\"./../../../../assets/icon/kaaba-mecca.svg\" id=\"iconmecca\"></ion-icon> QIBLAT\n            </ion-button>\n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n"
+module.exports = "<ion-header>\n    <ion-toolbar>\n      <ion-buttons slot=\"start\">\n        <ion-menu-button></ion-menu-button>\n      </ion-buttons>\n      <ion-title>\n        Prayer Times\n      </ion-title>\n\n      <ion-buttons slot=\"primary\">\n        Reset\n        <ion-icon slot=\"end\" (click)=\"getlocation()\" name=\"locate\" style=\"font-size: 24px;\"></ion-icon>\n\n      </ion-buttons>\n\n    </ion-toolbar>\n  </ion-header>\n  \n\n<ion-content >\n  <ion-grid id=\"div\">\n\n    <ion-row>\n      <ion-col>\n        <ion-card *ngIf=\"hidedate\">\n          <ion-card-content class=\"ion-text-center\">\n              <b> {{date_hijri}}  {{date_hijri_day}},  {{date_hijri_year}}</b> <br> \n              <p style=\"font-size: .8em\">{{date_gregorian}}<br>  \n                <sub style=\"font-size: 1em\">{{coorState}}, {{coorCounty}} </sub>\n              </p>\n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n \n\n    <ion-row id=\"secondbox\">\n      <ion-col>\n        <ion-card>\n          <ion-card-content>\n            <ion-row class=\"border\">\n              <ion-col>\n                <h3><b>Next Prayer</b></h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3><b>Time Prayer</b></h3>\n              </ion-col>\n            </ion-row>\n            \n            <hr>\n            \n            <ion-row>\n              <ion-col>\n                <h3>Fajr </h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3>{{p0}}</h3>\n              </ion-col>\n          </ion-row>\n          <ion-row>\n              <ion-col>\n                <h3>Sunrise</h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3>{{p1}}</h3>\n              </ion-col>\n          </ion-row>\n          <ion-row>\n              <ion-col>\n                <h3>Dhuhr</h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3>{{p2}}</h3>\n              </ion-col>\n          </ion-row>\n          <ion-row>\n              <ion-col>\n                <h3>Asr</h3>\n              </ion-col>\n              <ion-col class=\"text-right\">\n                <h3>{{p3}}</h3>\n              </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col>\n              <h3>Maghrib</h3>\n            </ion-col>\n            <ion-col class=\"text-right\">\n              <h3>{{p4}}</h3>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col>\n              <h3>\n                Isha\n              </h3>\n            </ion-col>\n            <ion-col class=\"text-right\">\n              <h3>\n                {{p5}}\n              </h3>\n          </ion-col>\n            </ion-row>\n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n\n    <ion-row id=\"secondbox\">\n      <ion-col>\n        <ion-card>\n          <ion-card-content>\n            <ion-button (click)=\"gotoqiblat()\" expand=\"full\" color=\"danger\">\n                <ion-icon src=\"./../../../../assets/icon/kaaba-mecca.svg\" id=\"iconmecca\"></ion-icon> QIBLAT\n            </ion-button>\n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -66,7 +66,7 @@ PrayertimePageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#div {\n  background: url('maxresdefault.jpg');\n  height: 100%;\n  background-size: max-content;\n}\n\nion-card {\n  font-size: 20px;\n}\n\nion-card {\n  background: white;\n}\n\n.text-right {\n  text-align: right;\n}\n\n#iconmecca {\n  margin-right: 1em;\n}\n\n#secondbox {\n  margin-top: -20px;\n}\n\n.border {\n  border-bottom: 1px solid #b9b9b9;\n}\n\n#btnmedium {\n  --background: #4e397a;\n  --color: #ffffff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZS9wcmF5ZXJ0aW1lL0M6XFxVc2Vyc1xcYWl6YXRcXERvY3VtZW50c1xcUXVyYW5Ib3VyXFwyLjIvc3JjXFxhcHBcXHBhZ2VcXHByYXllcnRpbWVcXHByYXllcnRpbWUucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlL3ByYXllcnRpbWUvcHJheWVydGltZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxvQ0FBQTtFQUNBLFlBQUE7RUFDQSw0QkFBQTtBQ0NKOztBREVBO0VBQ0ksZUFBQTtBQ0NKOztBREVBO0VBQ0ksaUJBQUE7QUNDSjs7QURFQTtFQUNJLGlCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxpQkFBQTtBQ0VKOztBREFBO0VBQ0ksaUJBQUE7QUNHSjs7QURBQTtFQUNJLGdDQUFBO0FDR0o7O0FEQUE7RUFDSSxxQkFBQTtFQUNBLGdCQUFBO0FDR0oiLCJmaWxlIjoic3JjL2FwcC9wYWdlL3ByYXllcnRpbWUvcHJheWVydGltZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjZGl2IHtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9pbWFnZXMvbWF4cmVzZGVmYXVsdC5qcGcnKTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1zaXplOiBtYXgtY29udGVudDtcbn1cblxuaW9uLWNhcmQge1xuICAgIGZvbnQtc2l6ZTogMjBweDtcbn1cblxuaW9uLWNhcmQge1xuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xufVxuXG4udGV4dC1yaWdodHtcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcbn1cbiNpY29ubWVjY2F7XG4gICAgbWFyZ2luLXJpZ2h0OiAxZW07XG59XG4jc2Vjb25kYm94e1xuICAgIG1hcmdpbi10b3A6LTIwcHg7XG59XG5cbi5ib3JkZXIge1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjYjliOWI5O1xufVxuXG4jYnRubWVkaXVtIHtcbiAgICAtLWJhY2tncm91bmQ6ICM0ZTM5N2E7XG4gICAgLS1jb2xvcjogI2ZmZmZmZjtcbiAgfSIsIiNkaXYge1xuICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi8uLi8uLi9hc3NldHMvaW1hZ2VzL21heHJlc2RlZmF1bHQuanBnXCIpO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGJhY2tncm91bmQtc2l6ZTogbWF4LWNvbnRlbnQ7XG59XG5cbmlvbi1jYXJkIHtcbiAgZm9udC1zaXplOiAyMHB4O1xufVxuXG5pb24tY2FyZCB7XG4gIGJhY2tncm91bmQ6IHdoaXRlO1xufVxuXG4udGV4dC1yaWdodCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xufVxuXG4jaWNvbm1lY2NhIHtcbiAgbWFyZ2luLXJpZ2h0OiAxZW07XG59XG5cbiNzZWNvbmRib3gge1xuICBtYXJnaW4tdG9wOiAtMjBweDtcbn1cblxuLmJvcmRlciB7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjYjliOWI5O1xufVxuXG4jYnRubWVkaXVtIHtcbiAgLS1iYWNrZ3JvdW5kOiAjNGUzOTdhO1xuICAtLWNvbG9yOiAjZmZmZmZmO1xufSJdfQ== */"
+module.exports = "#div {\n  background: url('maxresdefault.jpg');\n  height: 100%;\n  background-size: max-content;\n}\n\nion-card {\n  font-size: 20px;\n}\n\nion-card {\n  background: white;\n}\n\n.text-right {\n  text-align: right;\n}\n\n#iconmecca {\n  margin-right: 1em;\n}\n\n#secondbox {\n  margin-top: -20px;\n}\n\n.border {\n  border-bottom: 1px solid #b9b9b9;\n}\n\n#btnmedium {\n  --background: #4e397a;\n  --color: #ffffff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9haXphdGhheml6YW4vRGVza3RvcC9kaXJlY3Rpb24vcXVyYW5hcHAvc3JjL2FwcC9wYWdlL3ByYXllcnRpbWUvcHJheWVydGltZS5wYWdlLnNjc3MiLCJzcmMvYXBwL3BhZ2UvcHJheWVydGltZS9wcmF5ZXJ0aW1lLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG9DQUFBO0VBQ0EsWUFBQTtFQUNBLDRCQUFBO0FDQ0o7O0FERUE7RUFDSSxlQUFBO0FDQ0o7O0FERUE7RUFDSSxpQkFBQTtBQ0NKOztBREVBO0VBQ0ksaUJBQUE7QUNDSjs7QURDQTtFQUNJLGlCQUFBO0FDRUo7O0FEQUE7RUFDSSxpQkFBQTtBQ0dKOztBREFBO0VBQ0ksZ0NBQUE7QUNHSjs7QURBQTtFQUNJLHFCQUFBO0VBQ0EsZ0JBQUE7QUNHSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2UvcHJheWVydGltZS9wcmF5ZXJ0aW1lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNkaXYge1xuICAgIGJhY2tncm91bmQ6IHVybCgnLi4vLi4vLi4vYXNzZXRzL2ltYWdlcy9tYXhyZXNkZWZhdWx0LmpwZycpO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IG1heC1jb250ZW50O1xufVxuXG5pb24tY2FyZCB7XG4gICAgZm9udC1zaXplOiAyMHB4O1xufVxuXG5pb24tY2FyZCB7XG4gICAgYmFja2dyb3VuZDogd2hpdGU7XG59XG5cbi50ZXh0LXJpZ2h0e1xuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xufVxuI2ljb25tZWNjYXtcbiAgICBtYXJnaW4tcmlnaHQ6IDFlbTtcbn1cbiNzZWNvbmRib3h7XG4gICAgbWFyZ2luLXRvcDotMjBweDtcbn1cblxuLmJvcmRlciB7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNiOWI5Yjk7XG59XG5cbiNidG5tZWRpdW0ge1xuICAgIC0tYmFja2dyb3VuZDogIzRlMzk3YTtcbiAgICAtLWNvbG9yOiAjZmZmZmZmO1xuICB9IiwiI2RpdiB7XG4gIGJhY2tncm91bmQ6IHVybChcIi4uLy4uLy4uL2Fzc2V0cy9pbWFnZXMvbWF4cmVzZGVmYXVsdC5qcGdcIik7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1zaXplOiBtYXgtY29udGVudDtcbn1cblxuaW9uLWNhcmQge1xuICBmb250LXNpemU6IDIwcHg7XG59XG5cbmlvbi1jYXJkIHtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG59XG5cbi50ZXh0LXJpZ2h0IHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG59XG5cbiNpY29ubWVjY2Ege1xuICBtYXJnaW4tcmlnaHQ6IDFlbTtcbn1cblxuI3NlY29uZGJveCB7XG4gIG1hcmdpbi10b3A6IC0yMHB4O1xufVxuXG4uYm9yZGVyIHtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNiOWI5Yjk7XG59XG5cbiNidG5tZWRpdW0ge1xuICAtLWJhY2tncm91bmQ6ICM0ZTM5N2E7XG4gIC0tY29sb3I6ICNmZmZmZmY7XG59Il19 */"
 
 /***/ }),
 
@@ -107,6 +107,7 @@ let PrayertimePage = class PrayertimePage {
         this.address = "http://api.aladhan.com/v1/calendar?latitude=" + localStorage.getItem('latitude') + "&longitude=" + localStorage.getItem('longitude') +
             "&method=" + localStorage.getItem('prayermethod');
         this.myUrl = this.address;
+        this.abc = "20:20";
         this.hidedate = true;
         this.backgroundMode.enable();
         this.platform.ready().then(() => {
@@ -119,6 +120,7 @@ let PrayertimePage = class PrayertimePage {
         this.presentloading();
     }
     ngOnInit() {
+        this.deviceLocation();
         var d = new Date();
         let vaf = d.getDate();
         let arrayday = vaf - 1;
@@ -140,7 +142,7 @@ let PrayertimePage = class PrayertimePage {
             this.date_timezone = url_datetimezone['timezone'];
             this.date_gregorian = url_datereason['readable'];
         }, error => {
-            this.hidedate = false;
+            // this.hidedate=false;
         });
         if (localStorage.getItem('asrNoti') != null) {
             this.asrhr = (localStorage.getItem('asrNoti')[0] + localStorage.getItem('asrNoti')[1]);
@@ -162,6 +164,13 @@ let PrayertimePage = class PrayertimePage {
             this.ishamin = (localStorage.getItem('ishaNoti')[3] + localStorage.getItem('ishaNoti')[4]);
             this.p5 = this.ishahr + ":" + this.ishamin;
         }
+    }
+    deviceLocation() {
+        this.http.get('https://geoip-db.com/json/')
+            .subscribe((data) => {
+            this.coorState = data.state;
+            this.coorCounty = data.country_name;
+        });
     }
     getlocation() {
         this.geolocation.getCurrentPosition().then((resp) => {
@@ -205,7 +214,6 @@ let PrayertimePage = class PrayertimePage {
                 text: "Drop everything lets pray",
                 trigger: { at: new Date(new Date().setHours(this.fajrhr, this.fajrmin, 0, 0)) },
                 foreground: true,
-                vibrate: true,
                 sound: "file://azan2.mp3",
                 smallIcon: 'res://QH-icon-v5.png',
                 icon: 'file://icon/QH-icon-v5.png'
@@ -216,7 +224,6 @@ let PrayertimePage = class PrayertimePage {
                 text: "Drop everything lets pray",
                 trigger: { at: new Date(new Date().setHours(this.dhuhrhr, this.dhuhrmin, 0, 0)) },
                 foreground: true,
-                vibrate: true,
                 sound: "file://azan2.mp3",
                 smallIcon: 'res://QH-icon-v5.png',
                 icon: 'file://icon/QH-icon-v5.png'
@@ -227,7 +234,6 @@ let PrayertimePage = class PrayertimePage {
                 text: "Drop everything lets pray",
                 trigger: { at: new Date(new Date().setHours(this.asrhr, this.asrmin, 0, 0)) },
                 foreground: true,
-                vibrate: true,
                 sound: "file://azan2.mp3",
                 smallIcon: 'res://QH-icon-v5.png',
                 icon: 'file://icon/QH-icon-v5.png'
@@ -238,7 +244,6 @@ let PrayertimePage = class PrayertimePage {
                 text: "Drop everything lets pray",
                 trigger: { at: new Date(new Date().setHours(this.maghribhr, this.maghribmin, 0, 0)) },
                 foreground: true,
-                vibrate: true,
                 sound: "file://azan2.mp3",
                 smallIcon: 'res://QH-icon-v5.png',
                 icon: 'file://icon/QH-icon-v5.png'
@@ -249,7 +254,6 @@ let PrayertimePage = class PrayertimePage {
                 text: "Drop everything lets pray",
                 trigger: { at: new Date(new Date().setHours(this.ishahr, this.ishamin, 0, 0)) },
                 foreground: true,
-                vibrate: true,
                 sound: "file://azan2.mp3",
                 smallIcon: 'res://QH-icon-v5.png',
                 icon: 'file://icon/QH-icon-v5.png'

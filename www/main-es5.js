@@ -559,7 +559,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-menu {\n  --ion-background-color: var(--ion-color-dark-tint);\n  --ion-text-color: var(--ion-color-primary-contrast);\n}\nion-menu ion-footer {\n  --ion-background-color: var(--ion-color-gray-dark);\n}\nion-menu ion-list {\n  /* optional, but it needs when you use gradient as a background color.*/\n  background: transparent;\n}\nion-menu ion-footer {\n  position: absolute;\n  bottom: 0px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxhaXphdFxcRG9jdW1lbnRzXFxRdXJhbkhvdXJcXDIuMi9zcmNcXGFwcFxcYXBwLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrREFBQTtFQUNBLG1EQUFBO0FDQ0o7QURFSTtFQUNJLGtEQUFBO0FDQVI7QURHSTtFQUFVLHVFQUFBO0VBQ1IsdUJBQUE7QUNBTjtBREdJO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0FDRE4iLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tbWVudSB7XG4gICAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogdmFyKC0taW9uLWNvbG9yLWRhcmstdGludCk7XG4gICAgLS1pb24tdGV4dC1jb2xvcjogdmFyKC0taW9uLWNvbG9yLXByaW1hcnktY29udHJhc3QpO1xuICBcbiAgICBcbiAgICBpb24tZm9vdGVyIHtcbiAgICAgICAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogdmFyKC0taW9uLWNvbG9yLWdyYXktZGFyayk7XG4gICAgfVxuICBcbiAgICBpb24tbGlzdCB7Lyogb3B0aW9uYWwsIGJ1dCBpdCBuZWVkcyB3aGVuIHlvdSB1c2UgZ3JhZGllbnQgYXMgYSBiYWNrZ3JvdW5kIGNvbG9yLiovXG4gICAgICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbiAgICB9XG5cbiAgICBpb24tZm9vdGVyIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMHB4O1xuICB9XG59XG4iLCJpb24tbWVudSB7XG4gIC0taW9uLWJhY2tncm91bmQtY29sb3I6IHZhcigtLWlvbi1jb2xvci1kYXJrLXRpbnQpO1xuICAtLWlvbi10ZXh0LWNvbG9yOiB2YXIoLS1pb24tY29sb3ItcHJpbWFyeS1jb250cmFzdCk7XG59XG5pb24tbWVudSBpb24tZm9vdGVyIHtcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogdmFyKC0taW9uLWNvbG9yLWdyYXktZGFyayk7XG59XG5pb24tbWVudSBpb24tbGlzdCB7XG4gIC8qIG9wdGlvbmFsLCBidXQgaXQgbmVlZHMgd2hlbiB5b3UgdXNlIGdyYWRpZW50IGFzIGEgYmFja2dyb3VuZCBjb2xvci4qL1xuICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbn1cbmlvbi1tZW51IGlvbi1mb290ZXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJvdHRvbTogMHB4O1xufSJdfQ== */"
+module.exports = "ion-menu {\n  --ion-background-color: var(--ion-color-dark-tint);\n  --ion-text-color: var(--ion-color-primary-contrast);\n}\nion-menu ion-footer {\n  --ion-background-color: var(--ion-color-gray-dark);\n}\nion-menu ion-list {\n  /* optional, but it needs when you use gradient as a background color.*/\n  background: transparent;\n}\nion-menu ion-footer {\n  position: absolute;\n  bottom: 0px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9haXphdGhheml6YW4vRGVza3RvcC9kaXJlY3Rpb24vcXVyYW5hcHAvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtEQUFBO0VBQ0EsbURBQUE7QUNDSjtBREVJO0VBQ0ksa0RBQUE7QUNBUjtBREdJO0VBQVUsdUVBQUE7RUFDUix1QkFBQTtBQ0FOO0FER0k7RUFDRSxrQkFBQTtFQUNBLFdBQUE7QUNETiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1tZW51IHtcbiAgICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1pb24tY29sb3ItZGFyay10aW50KTtcbiAgICAtLWlvbi10ZXh0LWNvbG9yOiB2YXIoLS1pb24tY29sb3ItcHJpbWFyeS1jb250cmFzdCk7XG4gIFxuICAgIFxuICAgIGlvbi1mb290ZXIge1xuICAgICAgICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1pb24tY29sb3ItZ3JheS1kYXJrKTtcbiAgICB9XG4gIFxuICAgIGlvbi1saXN0IHsvKiBvcHRpb25hbCwgYnV0IGl0IG5lZWRzIHdoZW4geW91IHVzZSBncmFkaWVudCBhcyBhIGJhY2tncm91bmQgY29sb3IuKi9cbiAgICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICAgIH1cblxuICAgIGlvbi1mb290ZXIge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAwcHg7XG4gIH1cbn1cbiIsImlvbi1tZW51IHtcbiAgLS1pb24tYmFja2dyb3VuZC1jb2xvcjogdmFyKC0taW9uLWNvbG9yLWRhcmstdGludCk7XG4gIC0taW9uLXRleHQtY29sb3I6IHZhcigtLWlvbi1jb2xvci1wcmltYXJ5LWNvbnRyYXN0KTtcbn1cbmlvbi1tZW51IGlvbi1mb290ZXIge1xuICAtLWlvbi1iYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1pb24tY29sb3ItZ3JheS1kYXJrKTtcbn1cbmlvbi1tZW51IGlvbi1saXN0IHtcbiAgLyogb3B0aW9uYWwsIGJ1dCBpdCBuZWVkcyB3aGVuIHlvdSB1c2UgZ3JhZGllbnQgYXMgYSBiYWNrZ3JvdW5kIGNvbG9yLiovXG4gIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xufVxuaW9uLW1lbnUgaW9uLWZvb3RlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAwcHg7XG59Il19 */"
 
 /***/ }),
 
@@ -729,6 +729,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_native_audio_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/native-audio/ngx */ "./node_modules/@ionic-native/native-audio/ngx/index.js");
 /* harmony import */ var _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic-native/local-notifications/ngx */ "./node_modules/@ionic-native/local-notifications/ngx/index.js");
 /* harmony import */ var _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ionic-native/background-mode/ngx */ "./node_modules/@ionic-native/background-mode/ngx/index.js");
+/* harmony import */ var _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/device-orientation/ngx */ "./node_modules/@ionic-native/device-orientation/ngx/index.js");
+
 
 
 
@@ -763,7 +765,8 @@ var AppModule = /** @class */ (function () {
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
                 _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_13__["BackgroundMode"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
-                _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_12__["LocalNotifications"]
+                _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_12__["LocalNotifications"],
+                _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_14__["DeviceOrientation"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
@@ -836,7 +839,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\aizat\Documents\QuranHour\2.2\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/aizathazizan/Desktop/direction/quranapp/src/main.ts */"./src/main.ts");
 
 
 /***/ })
