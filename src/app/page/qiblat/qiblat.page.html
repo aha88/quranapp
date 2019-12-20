@@ -11,7 +11,14 @@
   
 
   <ion-content >
-    <ion-grid id="div">
-    </ion-grid>
+     <div class="ion-text-center">
+        <h2>
+          {{cardinalPosition}} {{compassDegree}}&deg;
+        </h2>
+     </div> 
 
-  </ion-content>
+      <img id="image" src="../../../assets/images/compass.png">
+        <img src="../../../assets/images/compass-arrow.png">
+
+        {{latCoords}} - {{lngCoords}}
+      </ion-content>
