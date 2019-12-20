@@ -1,0 +1,24 @@
+{
+    "data":
+        {
+        "name": "The Sincerity",
+        "index": "112",
+        "verse": [
+             
+            {
+                "textEng": "Say, \"He is God, the One."
+            },
+            {
+                "textEng": "God, the Absolute."
+            },
+            {
+                "textEng": "He begets not, nor was He begotten."
+            },
+            {
+                "textEng": "And there is nothing comparable to Him."
+            }
+
+        ],
+        "count": 4
+    }
+}

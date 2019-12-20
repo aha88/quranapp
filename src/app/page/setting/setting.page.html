@@ -1,0 +1,82 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+      </ion-title>
+        <ion-button color="warning" slot="end" (click)="savesetting()">Save</ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ion-grid>
+
+  <ion-row>
+    <ion-col>
+      <h6>Quran Translations</h6>
+        <ion-item>
+          <ion-label>Language<br>Translations</ion-label><br>
+          <ion-select name="language" [(ngModel)]="selectcategorylanguage" (ionChange)="checkValue($event)" interface="action-sheet" >
+              <ion-select-option value="ar">Arab</ion-select-option>
+              <ion-select-option value="en" >English</ion-select-option>
+              <ion-select-option value="id">Indonedia</ion-select-option>
+          </ion-select>
+        </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <h6>Notification</h6>
+        <ion-item>
+          <ion-label>Reminder Azan</ion-label><br>
+            <ion-toggle color="secondary" [(ngModel)]="azan" checked></ion-toggle>        
+        </ion-item>
+    </ion-col>
+  </ion-row>
+
+
+
+  <ion-row>
+    <ion-col>
+      <h6>Prayer Setting</h6>
+      
+      <ion-item>
+      <ion-label>Prayer Method:</ion-label>
+        
+        <ion-select (ionChange)="checkValueTime($event)"  [(ngModel)]="selectcategoryprayer" name="prayer"  interface="action-sheet" style="width: 100%;">
+            <ion-select-option value="0" >Shia Ithna-Ansari</ion-select-option>
+            <ion-select-option value="1">University of Islamic Sciences, Karachi</ion-select-option>
+            <ion-select-option value="2" >Islamic Society of North America</ion-select-option>
+            <ion-select-option value="3">Muslim World League</ion-select-option>
+            <ion-select-option value="4">Umm Al-Qura University, Mecca</ion-select-option>
+            <ion-select-option value="5">Egyptian General Authority of Survey	</ion-select-option>
+            <ion-select-option value="7">Institute of Geophysics, University of Tehran</ion-select-option>
+            <ion-select-option value="8">Gulf Region</ion-select-option>
+            <ion-select-option value="9">Kuwait</ion-select-option>
+            <ion-select-option value="10">Qatar</ion-select-option>
+            <ion-select-option value="11">Majlis Ugama Islam Singapura</ion-select-option>
+            <ion-select-option value="12">Union des Organisations Islamiques de France</ion-select-option>
+            <ion-select-option value="13">Diyanet İşleri Başkanlığı, Turkey</ion-select-option>
+            <ion-select-option value="14">Spiritual Administration of Muslims of Russia</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+      <ion-col>
+        <h6>Quran Theme</h6>
+          <ion-item>
+            <ion-label>List Style</ion-label><br>
+            <ion-select name="qurantheme" [(ngModel)]="selectthemequran" (ionChange)="checkValuequran($event)" interface="action-sheet" >
+                <ion-select-option value="read-quran">Standard</ion-select-option>
+                <ion-select-option value="read-quran2" >Line-by-line</ion-select-option>
+            </ion-select>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

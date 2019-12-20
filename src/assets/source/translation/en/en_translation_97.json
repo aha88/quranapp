@@ -1,0 +1,27 @@
+{
+    "data":
+        {
+        "name": "The Power",
+         "index": "97",
+        "verse": [
+             
+            {
+                "textEng": "We sent it down on the Night of Decree."
+            },
+            {
+                "textEng": "But what will convey to you what the Night of Decree is?"
+            },
+            {
+                "textEng": "The Night of Decree is better than a thousand months."
+            },
+            {
+                "textEng": "In it descend the angels and the Spirit, by the leave of their Lord, with every command."
+            },
+            {
+                "textEng": "Peace it is; until the rise of dawn."
+            }
+
+        ],
+        "count": 5
+    }
+}

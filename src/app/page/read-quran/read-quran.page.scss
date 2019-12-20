@@ -1,0 +1,71 @@
+
+
+  h3{
+    padding: 0px 12px;
+    font-family: quranFont !important;
+    line-height: 2.2;
+  }
+
+
+  ion-card{background: white;border-radius: 11px 11px 0px 0px;}
+  ion-card-content{
+    text-align: right !important;
+    width: 100%;
+  }
+
+  .card-content-md h3{
+    display: initial;
+    margin: -10px;
+    color: #000000;
+  }
+  
+
+  .boxbismillah{
+    border-bottom: 2px solid #666;
+    top: 0px;
+    position: relative;
+  }
+
+
+  .number {
+    font-size: .6em;
+    display: contents;
+  }
+  .topmenu{
+    background: #fdffe1;
+    color: #2c6b79;
+
+  }
+  .fntsize {
+    float: right;
+    margin-right:5px;
+    position: initial;
+  }
+  .titlesize {
+    margin-left:5px;
+    position: initial;
+  }
+
+  #goside {
+    margin-right:20px;
+  }
+
+  ion-icon {
+    font-size: 20px;
+  }
+
+  #background{
+    background: #e0f7f9;
+    padding: 4px;
+    height: 100%;
+    background-size: max-content;
+
+  }
+
+  #surahheader{background: white !important;}
+  #closeT {margin: auto;}
+  #myDiv {min-height: auto; max-height: 380px; position: sticky;bottom: 0px;background: #42307b;color: white;}
+  #cardbottom {width: 100%; margin-top: 0px;}
+  #cardbottom ion-card-content ion-icon {font-size: 32px;padding: 10px;}
+  #translation {text-align: left;font-size:14px;overflow:scroll ;min-height: auto; max-height: 230px;}
+

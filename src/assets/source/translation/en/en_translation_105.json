@@ -1,0 +1,26 @@
+{
+    "data":
+        {
+        "name": "The Elephant",
+        "index": "105",
+        "verse": [
+             
+            {
+                "textEng": "Have you not considered how your Lord dealt with the People of the Elephant?"
+            },
+            {
+                "textEng": "Did He not make their plan go wrong?"
+            },
+            {
+                "textEng": "He sent against them swarms of birds."
+            },
+            {
+                "textEng": "Throwing at them rocks of baked clay."
+            },
+            {
+                "textEng": "Leaving them like chewed-up leaves."
+            }
+        ],
+        "count": 5
+    }
+}

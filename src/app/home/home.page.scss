@@ -1,0 +1,92 @@
+
+
+  h3{
+    padding: 0px 12px;
+    font-size: 26px;
+    font-family: quranFont !important;
+    text-align: right;
+    line-height: 2;
+  }
+
+  ion-label h2 {
+    font-size: 14px;
+    font-weight: bolder;
+  }
+
+  ion-label {
+    font-size: 14px;
+    font-weight: bolder;
+  }
+
+  .item-inner{
+    padding-right:0px !important;
+  }
+
+  #body{
+    background: #eae4ea;
+  }
+
+  #imgsvg {
+    height: 2em;
+  }
+
+  #buttonleft {
+    text-align: right;
+    // background: #f1da0b;
+    border-radius: 0px;
+  }
+
+  ion-row {
+    margin-bottom: 4px;
+  }
+  ion-col {
+      padding: 0px;
+      margin: 0.0053px;
+  }
+
+  #framebutton{
+    background: #ffce00;
+    text-align: center;
+    padding: 11px;
+    height: 47px;
+    margin: 0px;
+    color: white;
+  }
+  #itemlist{
+    padding: 0px 0px;
+  }
+
+  ion-label p {
+    font-size: 11px;
+    font-weight: lighter;
+  }
+
+ li h3 {
+    display: contents;
+    text-align: right;
+    margin-right: 15px;
+    color:black;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  ion-card-content{
+    text-align: right !important;
+    width: 100%;
+  }
+
+ 
+  
+  .boxbismillah{
+    border-bottom: 1px solid #666;
+  }
+
+
+  .number {
+    font-family: quranFontNumber !important;
+    display: contents;
+    font-size: 40px;
+    margin-right: 5px;
+  }

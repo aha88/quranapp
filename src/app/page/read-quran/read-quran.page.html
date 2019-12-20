@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="gobackroot()">
+       <ion-icon src="./../../../../assets/icon/backward.svg"></ion-icon>
+       <label> Back </label>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">
+        {{indexing}} | {{SurahSatu}}
+    </ion-title>
+    
+    <ion-buttons id="goside" slot="end" (click)="gotonext()">
+      <label> Next </label>
+       <ion-icon src="./../../../../assets/icon/forward.svg"></ion-icon>
+    </ion-buttons>  
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content> 
+
+  <ion-refresher slot="fixed" (ionRefresh)="ionRefresh($event)" >
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-row class="topmenu">
+    <ion-col size="5"  class="ion-text-left">
+      <sub style="top: 2px;position: relative;"> 
+        {{SurahSatuT}} - ( {{batverse}} / {{count}} )
+      </sub>
+    </ion-col>
+    <ion-col size="2" class="ion-text-center">
+      <sub style="top: 2px;position: relative;">
+        Juz {{juz}}
+      </sub>
+    </ion-col>
+    <ion-col style="text-align: right;">
+      <sub>
+        <sub style="top: -6px;position: relative;">Font Size</sub> 
+        <ion-icon (click)="decfont()" name="remove-circle-outline"></ion-icon>
+        <ion-icon (click)="incfont()" name="add-circle-outline"></ion-icon>
+      </sub>
+    </ion-col>
+  </ion-row>
+<div id="background">
+
+
+  <ion-card>
+    <ion-card-content style="overflow-y: scroll;">
+      <div class="ion-text-center boxbismillah">
+            <ion-grid id="surahheader">
+              <ion-row *ngIf="bismillah">
+                <ion-col size="12">
+                  <h4 style="text-align: -webkit-center;">
+                      <img style="height: 40px;width:auto;text-align: center;" src="./../../assets/images/Bismillah.svg">
+                  </h4>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+      </div>
+      <div style="height: 74vh;"> 
+            <h3 *ngFor="let p of serahall;" >
+              <h3 id="{{p.audioID}}" [style.font-size]="fontSize + 'px'" [style.background]="isTrue === p.audioID  ?   bkgh3 : 'transparent' " (click)="myverse(p)" button="true">
+                {{p.text}} 
+                <h3 class="number">&#1757;{{p.number}}</h3>
+              </h3>
+            </h3>
+      </div>
+    </ion-card-content>
+  </ion-card>  
+  <ion-row  *ngIf="hideout" id="myDiv">
+      <ion-icon (click)="closeT()" name="menu" id="closeT"></ion-icon>
+    <ion-card id="cardbottom">
+      <ion-card-content>
+        <p  [style.font-size]="fontSizeT + 'px'" id="translation">{{setfav}}. {{pageh.textEng}}</p> 
+        <ion-icon (touchend)="endCount()"  (click)="savebookmark()" src="{{fav}}"></ion-icon>
+        <ion-icon *ngIf="playStopbtn" (click)="soundverse($event)" id="{{audio}}" src="./../../../../assets/icon/volume-mute.svg"></ion-icon>
+        <ion-icon *ngIf="playStopbtn" (click)="soundstop($event)" id="{{audio}}" src="./../../../../assets/icon/stop.svg"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>  
+  
+</div>  
+
+</ion-content>
+
+
+
+ 

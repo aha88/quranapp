@@ -1,0 +1,44 @@
+{
+    "data":    {
+        "name": "The Morning Hours",
+        "index": "93",
+        "verse": [
+             
+            {
+                "textEng": "By the morning light."
+            },
+            {
+                "textEng": "And the night as it settles."
+            },
+            {
+                "textEng": "Your Lord did not abandon you, nor did He forget."
+            },
+            {
+                "textEng": "The Hereafter is better for you than the First."
+            },
+            {
+                "textEng": "And your Lord will give you, and you will be satisfied."
+            },
+            {
+                "textEng": "Did He not find you orphaned, and sheltered you?"
+            },
+            {
+                "textEng": "And found you wandering, and guided you."
+            },
+            {
+                "textEng": "And found you in need, and enriched you?"
+            },
+            {
+                "textEng": "Therefore, do not mistreat the orphan."
+            },
+            {
+                "textEng0": "Nor rebuff the seeker."
+            },
+            {
+                "textEng1": "But proclaim the blessings of your Lord."
+            }
+
+        ],
+        "count": 11
+    }
+}

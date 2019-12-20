@@ -1,0 +1,33 @@
+{
+    "data":
+        {
+        "name": "THe Small Kindesses",
+        "index": "107",
+        "verse": [
+             
+            {
+                "textEng": "Have you considered him who denies the religion?"
+            },
+            {
+                "textEng": "It is he who mistreats the orphan."
+            },
+            {
+                "textEng": "And does not encourage the feeding of the poor."
+            },
+            {
+                "textEng": "So woe to those who pray."
+            },
+            {
+                "textEng": "Those who are heedless of their prayers."
+            },
+            {
+                "textEng": "Those who put on the appearance."
+            },
+            {
+                "textEng": "And withhold the assistance."
+            }
+
+        ],
+        "count": 7
+    }
+}

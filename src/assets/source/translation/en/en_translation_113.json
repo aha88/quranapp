@@ -1,0 +1,25 @@
+{
+    "data":    {
+        "name": "The Daybreak",
+        "index": "113",
+        "verse": [
+             
+            {
+                "textEng": "Say, \"I take refuge with the Lord of Daybreak."
+            },
+            {
+                "textEng": "From the evil of what He created."
+            },
+            {
+                "textEng": "And from the evil of the darkness as it gathers."
+            },
+            {
+                "textEng": "And from the evil of those who practice sorcery."
+            },
+            {
+                "textEng": "And from the evil of an envious when he envies.\""
+            }
+        ],
+        "count": 5
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "data":
+        {
+        "name": "Disbelievers",
+        "index": "109",
+        "verse": [
+             
+            {
+                "textEng": "Say, \"O disbelievers."
+            },
+            {
+                "textEng": "I do not worship what you worship."
+            },
+            {
+                "textEng": "Nor do you worship what I worship."
+            },
+            {
+                "textEng": "Nor do I serve what you serve."
+            },
+            {
+                "textEng": "Nor do you serve what I serve."
+            },
+            {
+                "textEng": "You have your way, and I have my way."
+            }
+
+        ],
+        "count": 6
+    }
+}

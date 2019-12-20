@@ -1,0 +1,45 @@
+{
+    "data":
+        {
+        "name": "The Calamity",
+        "index": "101",
+        "verse": [
+             
+            {
+                "textEng": "The Shocker."
+            },
+            {
+                "textEng": "What is the Shocker?"
+            },
+            {
+                "textEng": "What will explain to you what the Shocker is?"
+            },
+            {
+                "textEng": "The Day when the people will be like scattered moths."
+            },
+            {
+                "textEng": "And the mountains will be like tufted wool."
+            },
+            {
+                "textEng": "As for he whose scales are heavy."
+            },
+            {
+                "textEng": "He will be in a pleasant life."
+            },
+            {
+                "textEng": "But as for he whose scales are light."
+            },
+            {
+                "textEng": "His home is the Abyss."
+            },
+            {
+                "textEng": "Do you know what it is?"
+            },
+            {
+                "textEng": "A Raging Fire."
+            }
+
+        ],
+        "count": 11
+    }
+}

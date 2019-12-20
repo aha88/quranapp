@@ -1,0 +1,8 @@
+{
+  "name": "QuranHour",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

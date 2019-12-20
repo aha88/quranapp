@@ -1,0 +1,123 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Prayer Times
+      </ion-title>
+
+      <ion-buttons slot="primary">
+        Reset
+        <ion-icon slot="end" (click)="getlocation()" name="locate" style="font-size: 24px;"></ion-icon>
+
+      </ion-buttons>
+
+    </ion-toolbar>
+  </ion-header>
+  
+
+<ion-content >
+  <ion-grid id="div">
+
+    <ion-row>
+      <ion-col>
+        <ion-card *ngIf="hidedate">
+          <ion-card-content class="ion-text-center">
+              <b> {{date_hijri}}  {{date_hijri_day}},  {{date_hijri_year}}</b> <br> 
+              <p style="font-size: .8em">{{date_gregorian}}<br>  
+                <sub style="font-size: 1em">{{date_timezone}} </sub>
+              </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+ 
+
+    <ion-row id="secondbox">
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-row class="border">
+              <ion-col>
+                <h3><b>Next Prayer</b></h3>
+              </ion-col>
+              <ion-col class="text-right">
+                <h3><b>Time Prayer</b></h3>
+              </ion-col>
+            </ion-row>
+            
+            <hr>
+            d
+            <ion-row>
+              <ion-col>
+                <h3>Fajr </h3>
+              </ion-col>
+              <ion-col class="text-right">
+                <h3>{{fajrhr}}:{{fajrmin}}</h3>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <h3>Sunrise</h3>
+              </ion-col>
+              <ion-col class="text-right">
+                <h3>{{sunrisehr}}:{{sunrisemin}}</h3>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <h3>Dhuhr</h3>
+              </ion-col>
+              <ion-col class="text-right">
+                <h3>{{dhuhrhr}}:{{dhuhrmin}}</h3>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <h3>Asr</h3>
+              </ion-col>
+              <ion-col class="text-right">
+                <h3>{{asrhr}}:{{asrmin}}</h3>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <h3>Maghrib</h3>
+            </ion-col>
+            <ion-col class="text-right">
+              <h3>{{maghribhr}}:{{maghribmin}}</h3>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <h3>
+                Isha
+              </h3>
+            </ion-col>
+            <ion-col class="text-right">
+              <h3>
+                {{ishahr}}: {{ishamin}}
+              </h3>
+          </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row id="secondbox">
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-button (click)="gotoqiblat()" expand="full" color="danger">
+                <ion-icon src="./../../../../assets/icon/kaaba-mecca.svg" id="iconmecca"></ion-icon> QIBLAT
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

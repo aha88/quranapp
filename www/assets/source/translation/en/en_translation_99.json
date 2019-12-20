@@ -1,0 +1,36 @@
+{
+    "data":
+        {
+        "name": "The Earthquake",
+        "index": "99",
+        "verse": [
+             
+            {
+                "textEng": "When the earth is shaken with its quake."
+            },
+            {
+                "textEng": "And the earth brings out its loads."
+            },
+            {
+                "textEng": "And man says, \"What is the matter with it?\""
+            },
+            {
+                "textEng": "On that Day, it will tell its tales."
+            },
+            {
+                "textEng": "For your Lord will have inspired it."
+            },
+            {
+                "textEng": "On that Day, the people will emerge in droves, to be shown their works."
+            },
+            {
+                "textEng": "Whoever has done an atom's weight of good will see it."
+            },
+            {
+                "textEng": "And whoever has done an atom's weight of evil will see it."
+            }
+
+        ],
+        "count": 8
+    }
+}
