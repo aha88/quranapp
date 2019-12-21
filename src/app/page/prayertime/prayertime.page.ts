@@ -12,8 +12,10 @@ import { BackgroundMode } from '@ionic-native/background-mode/ngx';
 })
 export class PrayertimePage implements OnInit {
   
-  address= "http://api.aladhan.com/v1/calendar?latitude="+localStorage.getItem('latitude')+"&longitude="+localStorage.getItem('longitude')+
-        "&method="+localStorage.getItem('prayermethod');
+   address= "http://api.aladhan.com/v1/calendar?latitude="+localStorage.getItem('latitude')+"&longitude="+localStorage.getItem('longitude')+
+         "&method="+localStorage.getItem('prayermethod');
+
+  //address = "https://aladhan.com/prayer-times-api"
   
   myUrl= this.address;
                    
