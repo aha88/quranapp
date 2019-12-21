@@ -141,8 +141,6 @@ let PrayertimePage = class PrayertimePage {
             this.date_hijri_year = url_datehijri['year'];
             this.date_timezone = url_datetimezone['timezone'];
             this.date_gregorian = url_datereason['readable'];
-        }, error => {
-            // this.hidedate=false;
         });
         if (localStorage.getItem('asrNoti') != null) {
             this.asrhr = (localStorage.getItem('asrNoti')[0] + localStorage.getItem('asrNoti')[1]);
@@ -170,6 +168,8 @@ let PrayertimePage = class PrayertimePage {
             .subscribe((data) => {
             this.coorState = data.state;
             this.coorCounty = data.country_name;
+        }, error => {
+            this.hidedate = false;
         });
     }
     getlocation() {

@@ -60,7 +60,6 @@ export class ReadQuran2Page implements OnInit {
   ionRefresh(event) {
     setTimeout(() => {
       this.batverse = parseInt(localStorage.getItem("bookmark"));
-
       //complete()  signify that the refreshing has completed and to close the refresher
       event.target.complete();
     },2000);
@@ -88,17 +87,16 @@ export class ReadQuran2Page implements OnInit {
         this.bismillah=false;
     };
 
-    this.http.get('http://api.aladhan.com/v1/methods').subscribe(data => {
+    this.http.get('https://geoip-db.com/json/').subscribe((data: any) => { 
     },
-      error => {
-        this.playStopbtn=false;
-      }
-    );
+    error => {
+      this.playStopbtn=false;
+    });
+
 
     if(parseInt(localStorage.getItem('bookmarkSurah')) == parseInt(localStorage.getItem('readquran'))) 
     {
-      this.batverse =parseInt(localStorage.getItem("bookmark"));
-      
+      this.batverse =parseInt(localStorage.getItem("bookmark")); 
       this.isTrue = "v"+localStorage.getItem('bookmark');
     }
   }

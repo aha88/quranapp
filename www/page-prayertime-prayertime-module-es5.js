@@ -146,8 +146,6 @@ var PrayertimePage = /** @class */ (function () {
             _this.date_hijri_year = url_datehijri['year'];
             _this.date_timezone = url_datetimezone['timezone'];
             _this.date_gregorian = url_datereason['readable'];
-        }, function (error) {
-            // this.hidedate=false;
         });
         if (localStorage.getItem('asrNoti') != null) {
             this.asrhr = (localStorage.getItem('asrNoti')[0] + localStorage.getItem('asrNoti')[1]);
@@ -176,6 +174,8 @@ var PrayertimePage = /** @class */ (function () {
             .subscribe(function (data) {
             _this.coorState = data.state;
             _this.coorCounty = data.country_name;
+        }, function (error) {
+            _this.hidedate = false;
         });
     };
     PrayertimePage.prototype.getlocation = function () {

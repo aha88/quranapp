@@ -1,34 +1,34 @@
 <ion-app>
-    <ion-split-pane disabled="true"  contentId="menu-content">
-        <ion-menu contentId="menu-content">
-          <ion-header>   
-            <ion-toolbar color="dark">
-              <ion-title></ion-title>
-            </ion-toolbar>      
+  <ion-split-pane disabled="true"  contentId="menu-content">
+    <ion-menu contentId="menu-content">
+        
+        <ion-header>   
+          <ion-toolbar color="dark">
+            <ion-title></ion-title>
+          </ion-toolbar>      
         </ion-header>
 
-        <ion-content>
-          <ion-menu-toggle>
-            <ion-item  *ngFor="let p of menulist">
-              <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-                {{p.title}}
-              </ion-item>
-            </ion-item> 
+      <ion-content>
+        <ion-menu-toggle>
+          <div  *ngFor="let p of menulist">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              {{p.title}}
+            </ion-item>
+          </div> 
+            
+          <ion-footer *ngFor="let po of footerlist">
+            <ion-item [routerDirection]="'root'" [routerLink]="[po.url]">
+              <ion-label>
+                About
+              </ion-label>
+            </ion-item>
+          </ion-footer>
+
+        </ion-menu-toggle>
+      </ion-content> 
           
-            <ion-footer *ngFor="let po of footerlist">
-              <ion-item [routerDirection]="'root'" [routerLink]="[po.url]">
-                <ion-label>
-                  About
-                </ion-label>
-              </ion-item>
-            </ion-footer>
-    
-          </ion-menu-toggle>
-        </ion-content> 
-        
-      </ion-menu>
-        <!-- the main content -->
-        <ion-router-outlet id="menu-content"></ion-router-outlet>
-      </ion-split-pane>
+      </ion-menu> <!-- the main content -->
+      <ion-router-outlet id="menu-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
 

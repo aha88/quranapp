@@ -17,84 +17,77 @@
   </ion-header>
   
   
-  <ion-content style="--background:fffefa;  "> 
+  <ion-content style="--background:fffefa;  ">   
   
     <ion-refresher slot="fixed" (ionRefresh)="ionRefresh($event)" >
-      <ion-refresher-content
-        pullingIcon="arrow-dropdown"
-        pullingText="refresh"
-        refreshingSpinner="circles"
-        refreshingText="Refreshing...">
-      </ion-refresher-content>
-    </ion-refresher>
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
 
-    <ion-row id="menusticky">
-      <ion-col size="5"  class="ion-text-left">
-        <sub style="top: -6px;position: relative;"> 
-          {{SurahSatuT}} - ( {{batverse}} / {{count}} )
-        </sub>
-      </ion-col>
-      <ion-col size="2" class="ion-text-center">
-        <sub style="top: -6px;position: relative;">
-          Juz {{juz}}
-        </sub>
-      </ion-col>
+  <ion-row id="menusticky">
+    <ion-col size="5"  class="ion-text-left">
+      <sub style="top: -6px;position: relative;"> 
+        {{SurahSatuT}} - ( {{batverse}} / {{count}} )
+      </sub>
+    </ion-col>
+    <ion-col size="2" class="ion-text-center">
+      <sub style="top: -6px;position: relative;">
+        Juz {{juz}}
+      </sub>
+    </ion-col>
+    <ion-col>
+      <sub>
+        <sub style="top: -6px;position: relative;">Font Size</sub> 
+        <ion-icon (click)="decfont()" name="remove-circle-outline"></ion-icon>
+        <ion-icon (click)="incfont()" name="add-circle-outline"></ion-icon>
+      </sub>
+    </ion-col>
+  </ion-row>
+
+  <div class="ion-text-center boxbismillah">
+    <ion-grid id="surahheader" *ngIf="bismillah">
+      <ion-row >
+        <ion-col size="12">
+          <h4 style="text-align: -webkit-center;">
+              <img style="margin-top:30px;height: 40px;width:auto;text-align: center;" src="./../../assets/images/Bismillah.svg">
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+    
+  <div *ngFor="let p of serahall;" style="padding: 22px 0px;border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;" [style.background]="isTrue === p.audioID  ?   bkgh3 : 'transparent' ">
+      <ion-row (click)="myverse(p)">
+        <ion-col size="12" class="ion-text-left fontnumber">
+            &#1757;{{p.number}}
+        </ion-col>
+        <ion-col id="{{p.audioID}}" [style.font-size]="fontSize + 'px'"  button="true">
+          {{p.text}}                     
+        </ion-col>
+      </ion-row>
+  </div>
+        
+  <ion-row  *ngIf="hideout" id="myDiv">
+    <ion-icon (click)="closeT()" name="menu" id="closeT"></ion-icon>
+    <ion-row id="cardbottom">
       <ion-col>
-        <sub>
-          <sub style="top: -6px;position: relative;">Font Size</sub> 
-          <ion-icon (click)="decfont()" name="remove-circle-outline"></ion-icon>
-          <ion-icon (click)="incfont()" name="add-circle-outline"></ion-icon>
-        </sub>
+        <p  [style.font-size]="fontSizeT + 'px'" id="translation">{{setfav}}. {{pageh.textEng}}</p> 
       </ion-col>
     </ion-row>
-  
-  
- 
-        <div class="ion-text-center boxbismillah">
-              <ion-grid id="surahheader" *ngIf="bismillah">
-                <ion-row >
-                  <ion-col size="12">
-                    <h4 style="text-align: -webkit-center;">
-                        <img style="height: 40px;width:auto;text-align: center;" src="./../../assets/images/Bismillah.svg">
-                    </h4>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-        </div>
-        
-              <div *ngFor="let p of serahall;" style="padding: 22px 0px;border-top: 1px solid #e1e1e1;
-              border-bottom: 1px solid #e1e1e1;" [style.background]="isTrue === p.audioID  ?   bkgh3 : 'transparent' ">
-                <ion-row (click)="myverse(p)">
-                  <ion-col size="12" class="ion-text-left fontnumber">
-                      &#1757;{{p.number}}
-                  </ion-col>
-                  <ion-col id="{{p.audioID}}" [style.font-size]="fontSize + 'px'"  button="true">
-                    {{p.text}}                     
-                  </ion-col>
-                  
-                </ion-row>
-
-              </div>
-       
-
-        
-    <ion-row  *ngIf="hideout" id="myDiv">
-        <ion-icon (click)="closeT()" name="menu" id="closeT"></ion-icon>
-      <ion-row id="cardbottom">
-        <ion-col>
-          <p  [style.font-size]="fontSizeT + 'px'" id="translation">{{setfav}}. {{pageh.textEng}}</p> 
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-icon class="classicon" (touchend)="endCount()"  (click)="savebookmark()" src="{{fav}}"></ion-icon>
-          <ion-icon class="classicon" *ngIf="playStopbtn" (click)="soundverse($event)" id="{{audio}}" src="./../../../../assets/icon/volume-mute.svg"></ion-icon>
-          <ion-icon class="classicon" *ngIf="playStopbtn" (click)="soundstop($event)" id="{{audio}}" src="./../../../../assets/icon/stop.svg"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </ion-row>  
+    <ion-row>
+      <ion-col>
+        <ion-icon class="classicon" (touchend)="endCount()"  (click)="savebookmark()" src="{{fav}}"></ion-icon>
+        <ion-icon class="classicon" *ngIf="playStopbtn" (click)="soundverse($event)" id="{{audio}}" src="./../../../../assets/icon/volume-mute.svg"></ion-icon>
+        <ion-icon class="classicon" *ngIf="playStopbtn" (click)="soundstop($event)" id="{{audio}}" src="./../../../../assets/icon/stop.svg"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-row>  
     
-  
   </ion-content>
   
   

@@ -45,12 +45,14 @@ export class AppComponent {
   ishamin:any;
   sunrisehr: any;
   sunrisemin: any;
+  playStopbtn = true;
 
   
 
   address= "http://api.aladhan.com/v1/calendar?latitude="+localStorage.getItem('latitude')+"&longitude="+localStorage.getItem('longitude')+
-        "&method="+localStorage.getItem('prayermethod');
-  
+  "&method="+localStorage.getItem('prayermethod');
+
+
   myUrlNoti= this.address;
 
 
@@ -114,31 +116,27 @@ export class AppComponent {
 
   
   initializeApp() {
+    
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-  });
+    });
 
+    var d = new Date();
+    let vaf = d.getDate();
+    let arrayday = vaf-1;
 
-  var d = new Date();
-  let vaf = d.getDate();
-  let arrayday = vaf-1;
-
-  this.httpNoti.get(this.myUrlNoti).subscribe(data => {
-    let url_pray= data['data'][arrayday]['timings'];
-
+    this.httpNoti.get(this.myUrlNoti).subscribe(data => {
+      let url_pray= data['data'][arrayday]['timings'];
         localStorage.setItem('fajrNoti', url_pray['Fajr']);
         localStorage.setItem('sunriseNoti', url_pray['Sunrise']);
         localStorage.setItem('dhuhrNoti', url_pray['Dhuhr']);
         localStorage.setItem('asrNoti', url_pray['Asr']);
         localStorage.setItem('maghribNoti', url_pray['Maghrib']);
         localStorage.setItem('ishaNoti', url_pray['Isha']);
-
-  },
-  error => {
-
-  });
-
+    },error => {
+        this.playStopbtn = false;
+    });
 
   }
 

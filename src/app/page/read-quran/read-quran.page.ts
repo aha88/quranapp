@@ -55,8 +55,6 @@ export class ReadQuranPage implements OnInit {
   ){  
     this.presentloading();
    
-     
-
   } 
   
   ionRefresh(event) {
@@ -90,19 +88,18 @@ export class ReadQuranPage implements OnInit {
         this.bismillah=false;
     };
 
-    this.http.get('http://api.aladhan.com/v1/methods').subscribe(data => {
+    this.http.get('https://geoip-db.com/json/').subscribe((data: any) => { 
     },
-      error => {
-        this.playStopbtn=false;
-      }
-    );
+    error => {
+      this.playStopbtn=false;
+    });
 
     if(parseInt(localStorage.getItem('bookmarkSurah')) == parseInt(localStorage.getItem('readquran'))) 
     {
       this.batverse =parseInt(localStorage.getItem("bookmark"));
-      
       this.isTrue = "v"+localStorage.getItem('bookmark');
     }
+
   }
 
   
@@ -128,13 +125,10 @@ export class ReadQuranPage implements OnInit {
   {
     this.total = parseInt(localStorage.getItem('readquran'));
     this.tot = 1;
-
     this.all = this.tot + this.total;
-
     localStorage.setItem('readquran', this.all );
     window.location.reload();
     this.presentloading();
-
   }
 
   myverse(p)
@@ -144,7 +138,6 @@ export class ReadQuranPage implements OnInit {
     this.pageh = this.serahallt[p.verse-1];
     this.isTrue = p.audioID;
     this.isSurah = this.indexing;
-
 
     this.setfav = p.verse;
     this.audio = p['audioID'];

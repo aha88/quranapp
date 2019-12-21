@@ -15,7 +15,7 @@ export class PrayertimePage implements OnInit {
    address= "http://api.aladhan.com/v1/calendar?latitude="+localStorage.getItem('latitude')+"&longitude="+localStorage.getItem('longitude')+
          "&method="+localStorage.getItem('prayermethod');
 
-  //address = "https://aladhan.com/prayer-times-api"
+
   
   myUrl= this.address;
                    
@@ -97,34 +97,26 @@ export class PrayertimePage implements OnInit {
 
 
 
-    this.http.get(this.myUrl).subscribe(data => {
-      let url_pray= data['data'][arrayday]['timings'];
-      let datehijrimonth= data['data'][arrayday]['date']['hijri']['month'];
-      let url_datereason= data['data'][arrayday]['date'];
-      let url_datehijri= data['data'][arrayday]['date']['hijri'];
-      let url_datetimezone= data['data'][arrayday]['meta'];
+  this.http.get(this.myUrl).subscribe(data => {
+    let url_pray= data['data'][arrayday]['timings'];
+    let datehijrimonth= data['data'][arrayday]['date']['hijri']['month'];
+    let url_datereason= data['data'][arrayday]['date'];
+    let url_datehijri= data['data'][arrayday]['date']['hijri'];
+    let url_datetimezone= data['data'][arrayday]['meta'];
 
-         localStorage.setItem('fajrNoti',  url_pray['Fajr']);
-         localStorage.setItem('sunriseNoti', url_pray['Sunrise']);
-         localStorage.setItem('dhuhrNoti',  url_pray['Dhuhr']);
-         localStorage.setItem('asrNoti',  url_pray['Asr']);
-         localStorage.setItem('maghribNoti',  url_pray['Maghrib']);
-         localStorage.setItem('ishaNoti',  url_pray['Isha']);
+        localStorage.setItem('fajrNoti',  url_pray['Fajr']);
+        localStorage.setItem('sunriseNoti', url_pray['Sunrise']);
+        localStorage.setItem('dhuhrNoti',  url_pray['Dhuhr']);
+        localStorage.setItem('asrNoti',  url_pray['Asr']);
+        localStorage.setItem('maghribNoti',  url_pray['Maghrib']);
+        localStorage.setItem('ishaNoti',  url_pray['Isha']);
 
-  
-      this.date_hijri = datehijrimonth['en'];
-      this.date_hijri_day = url_datehijri['day'];
-      this.date_hijri_year = url_datehijri['year'];
-      this.date_timezone = url_datetimezone['timezone'];
-
-      this.date_gregorian = url_datereason['readable'];
-
-      
-    },
-    error => {
-       // this.hidedate=false;
-
-    });
+    this.date_hijri = datehijrimonth['en'];
+    this.date_hijri_day = url_datehijri['day'];
+    this.date_hijri_year = url_datehijri['year'];
+    this.date_timezone = url_datetimezone['timezone'];
+    this.date_gregorian = url_datereason['readable'];
+  });
 
   
 
@@ -163,6 +155,10 @@ export class PrayertimePage implements OnInit {
       .subscribe((data: any) => {
         this.coorState = data.state;
         this.coorCounty = data.country_name;
+      },
+      error => {
+         this.hidedate=false;
+  
       });
   }
 

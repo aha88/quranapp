@@ -495,7 +495,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n    <ion-split-pane disabled=\"true\"  contentId=\"menu-content\">\n        <ion-menu contentId=\"menu-content\">\n          <ion-header>   \n            <ion-toolbar color=\"dark\">\n              <ion-title></ion-title>\n            </ion-toolbar>      \n        </ion-header>\n\n        <ion-content>\n          <ion-menu-toggle>\n            <ion-item  *ngFor=\"let p of menulist\">\n              <ion-item [routerDirection]=\"'root'\" [routerLink]=\"[p.url]\">\n                {{p.title}}\n              </ion-item>\n            </ion-item> \n          \n            <ion-footer *ngFor=\"let po of footerlist\">\n              <ion-item [routerDirection]=\"'root'\" [routerLink]=\"[po.url]\">\n                <ion-label>\n                  About\n                </ion-label>\n              </ion-item>\n            </ion-footer>\n    \n          </ion-menu-toggle>\n        </ion-content> \n        \n      </ion-menu>\n        <!-- the main content -->\n        <ion-router-outlet id=\"menu-content\"></ion-router-outlet>\n      </ion-split-pane>\n</ion-app>\n\n"
+module.exports = "<ion-app>\n  <ion-split-pane disabled=\"true\"  contentId=\"menu-content\">\n    <ion-menu contentId=\"menu-content\">\n        \n        <ion-header>   \n          <ion-toolbar color=\"dark\">\n            <ion-title></ion-title>\n          </ion-toolbar>      \n        </ion-header>\n\n      <ion-content>\n        <ion-menu-toggle>\n          <div  *ngFor=\"let p of menulist\">\n            <ion-item [routerDirection]=\"'root'\" [routerLink]=\"[p.url]\">\n              {{p.title}}\n            </ion-item>\n          </div> \n            \n          <ion-footer *ngFor=\"let po of footerlist\">\n            <ion-item [routerDirection]=\"'root'\" [routerLink]=\"[po.url]\">\n              <ion-label>\n                About\n              </ion-label>\n            </ion-item>\n          </ion-footer>\n\n        </ion-menu-toggle>\n      </ion-content> \n          \n      </ion-menu> <!-- the main content -->\n      <ion-router-outlet id=\"menu-content\"></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>\n\n"
 
 /***/ }),
 
@@ -611,6 +611,7 @@ var AppComponent = /** @class */ (function () {
         this.footerlist = [
             { title: 'About', url: './about', },
         ];
+        this.playStopbtn = true;
         this.address = "http://api.aladhan.com/v1/calendar?latitude=" + localStorage.getItem('latitude') + "&longitude=" + localStorage.getItem('longitude') +
             "&method=" + localStorage.getItem('prayermethod');
         this.myUrlNoti = this.address;
@@ -663,6 +664,7 @@ var AppComponent = /** @class */ (function () {
             localStorage.setItem('maghribNoti', url_pray['Maghrib']);
             localStorage.setItem('ishaNoti', url_pray['Isha']);
         }, function (error) {
+            _this.playStopbtn = false;
         });
     };
     AppComponent.prototype.showAlert = function (header, sub, msg) {
